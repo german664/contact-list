@@ -62,7 +62,7 @@ export const ContactCard = props => {
 						</div>
 						<label className="name lead">
 							{modify && store.currentID == el.id ? (
-								<input type="text" placeholder={el.full_name} name="full_name" onChange={handleInput} />
+								<input type="text" value={state.full_name} name="full_name" onChange={handleInput} />
 							) : (
 								el.full_name
 							)}
@@ -71,7 +71,7 @@ export const ContactCard = props => {
 						<i className="fas fa-map-marker-alt text-muted mr-3" />
 						<span className="text-muted">
 							{modify && store.currentID == el.id ? (
-								<input placeholder={el.address} name="address" onChange={handleInput} />
+								<input value={state.address} name="address" onChange={handleInput} />
 							) : (
 								el.address
 							)}
@@ -85,7 +85,7 @@ export const ContactCard = props => {
 						/>
 						<span className="text-muted small">
 							{modify && store.currentID == el.id ? (
-								<input placeholder={el.phone} name="phone" onChange={handleInput} />
+								<input value={state.phone} name="phone" onChange={handleInput} />
 							) : (
 								el.phone
 							)}
@@ -99,7 +99,7 @@ export const ContactCard = props => {
 						/>
 						<span className="text-muted small text-truncate">
 							{modify && store.currentID == el.id ? (
-								<input placeholder={el.email} name="email" onChange={handleInput} />
+								<input value={state.email} name="email" onChange={handleInput} />
 							) : (
 								el.email
 							)}
